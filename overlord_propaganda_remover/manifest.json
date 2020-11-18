@@ -1,0 +1,35 @@
+{
+  "name": "Overlord Propaganda Remover",
+  "description" : "Get rid of dumbass propaganda sections from the YouTube overlords on the election, etc.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "images/smile16px.png",
+    "32": "images/smile32px.png",
+    "48": "images/smile48px.png",
+    "128": "images/smile128px.png"
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/smile16px.png",
+      "32": "images/smile32px.png",
+      "48": "images/smile48px.png",
+      "128": "images/smile128px.png"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["tabs", "activeTab", "declarativeContent", "storage", "*://*.youtube.com/watch*"],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "MacCtrl+Shift+K"
+      },
+      "description": "Opens popup.html"
+    }
+  }
+}
